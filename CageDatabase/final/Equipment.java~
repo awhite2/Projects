@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class Equipment{
+  //instance variables
+  private String department, type, id;
+  private boolean checkedoutStatus, goodCondition;
+  private int fineRate;
+  private Stack<Checkout> checkouts;
+  
+  //constructor
+  public Equipment(String dept, String t, int fine){
+    department = dept;
+    type = t;
+    //id = setID();
+    checkedoutStatus = false;
+    goodCondition = true;
+    fineRate = fine;
+    checkouts = new Stack<Checkout>();
+  }
+  
+  
+  //methods
+  
+  
+}

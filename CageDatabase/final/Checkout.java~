@@ -1,0 +1,104 @@
+/*For Jewett Cage Software
+ *CS230 Nina Broocks and Abra White
+ *This class provides the Checkout object and methods associated with it. The checkout object
+ *is used to store the time taken out, due date, and time returned for a specific piece of 
+ *equipment to a person.
+ * 
+ * @author Abra White
+ */
+import java.util.*;
+
+public class Checkout /*implements Comparable*/{
+  //instance variables
+  private People person;
+  //private Equipment equip;
+  private Date checkoutDate, dueDate, returnDate;
+  private int fine;
+  
+  
+  //constructor method
+  public Checkout(People name, Date due){
+    person = name;
+    checkoutDate = new Date();
+    dueDate = due;
+    fine = 0;
+  }
+  
+  //methods
+  /*************************************Setters**********************************************/
+  /*Sets person variable
+   * @parameters People newPerson
+   * @author Abra White
+   */
+  public void setPerson(People newPerson){
+    person = newPerson;
+  }
+  
+  /*Sets dueDate variable
+   * @parameters Date due
+   * @author Abra White
+   */ 
+  public void setDueDate(Date due){
+    dueDate = due;
+  }
+  
+  /*Sets returnDate variable
+   * @parameters Date date
+   * @author Abra White
+   */
+  public void setReturnDate(Date date){
+    returnDate = date;
+  }
+  
+  /*Sets returnDate variable
+   * uses current date
+   * @author Abra White
+   */
+  public void setReturnDate(){
+    returnDate = new Date();
+  }
+  
+  /*Sets fine variable
+   * @parameters int plus
+   * @author Abra White
+   */
+  public void setFineAmount(int plus){
+    fine = fine + plus;
+  }
+  
+  /*************************************Getters**********************************************/
+  /*Gets person variable
+   * @returns person
+   * @author Abra White
+   */
+  public People getPerson(){
+    return person;
+  }
+  
+  /*Gets dueDate variable
+   * @returns dueDate
+   * @author Abra White
+   */
+  public Date getDueDate(){
+   return dueDate;
+  }
+  
+  /*Gets returnDate variable
+   * @returns returnDate
+   * @author Abra White
+   */
+  public Date getReturnDate(){
+    return returnDate;
+  }
+  
+  /*Gets fine variable
+   * @returns fine
+   * @author Abra White
+   */
+  public int getFineAmount(){
+    return fine;
+  }
+  
+//  public boolean compareTo(Checkout c){
+//  }
+}

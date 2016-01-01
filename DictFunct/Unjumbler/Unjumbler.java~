@@ -1,0 +1,213 @@
+// Unjumbler is the class in which you should write your class methods 
+// for the Unjumbler problem. 
+
+// Since this class extends LabOps, it inherits class methods from all 
+// of StringList, StringListOps, and LabOps.  Such methods can be used
+// without the explicit "StringList.", "StringListOps.", or "LabOps."
+// prefixes. 
+// For example, you can write "head(L)" rather than
+// "StringList.head(L)", "length(L)" rather than
+// "StringListOps.length(L)", and  "isMember(s,L)" rather than
+// "LabOps.isMember(s,L)". 
+
+// The following methods are inherited from StringList:
+//    public static StringList empty();
+//    public static boolean isEmpty (StringList L);
+//    public static StringList prepend (String s, StringList L);
+//    public static String head (StringList L);
+//    public static StringList tail (StringList L);
+//    public static boolean equals (StringList L1, StringList L2);
+//    public static String toString (StringList L);
+//    public static String fromString (String s);
+
+// The following methods are inherited from StringListOps:
+//    public static int length (StringList L);
+//    public static StringList append (StringList L1, StringList L2); 
+//    public static StringList postpend (StringList L, String s);
+//    public static StringList reverse (StringList L);
+
+// The following methods are inherited from LabOps:
+//    public static StringList mapPluralize (StringList L) 
+//    public static StringList mapUpperCase (StringList L) 
+//    public static boolean isMember (String s, StringList L) 
+//    public static StringList filterMatches (String s, StringList L)
+//    public static String implode (StringList L) 
+//    public static StringList explode (String s) 
+//    public static StringList insert (String s, StringList L)
+//    public static StringList insertionSort (StringList L)
+//    public static String first (String s);
+//    public static String butFirst (String s);
+
+public class Unjumbler extends LabOps {
+
+  /************************************************************
+   You must replace the call in the body of each of the  
+   following 9 stubs with your own working code.  You can 
+   use the stubs for debugging other methods, of course,  
+   but in the end you must provide your own definitions. 
+   ************************************************************/
+
+  /************************************************************
+   Run the test cases for the other eight methods of the Unjumbler class. 
+   ***********************************************************/
+  public static void main (String [] args) {
+    
+    // Replace the following by your testing code. 
+    System.out.println("Please replace this message by your test cases for the other eight Unjumbler methods."); 
+    
+  }
+ 
+  /************************************************************
+   Returns a new list in which all occurrences of s in L have
+   been removed. The other strings in the list should have the
+   same relative order in the resulting list as in the given list.
+   ***********************************************************/
+  public static StringList remove (String s, StringList L) {
+    
+    // Replace these comments and the return statement
+    // below with your solution.
+    return UnjumblerAnswers.remove(s, L);
+    
+  }
+  
+  /***********************************************************  
+   Returns a list containing each string in L exactly once. 
+   The order of the elements in the returned list should be the
+   relative order of the *first* occurrence of each element in L.
+   **********************************************************/
+  public static StringList removeDuplicates (StringList L) {
+    
+    // Replace these comments and the return statement
+    // below with your solution.
+    return UnjumblerAnswers.removeDuplicates(L);
+
+  }
+
+  /***********************************************************  
+   Given a list L with n strings, returns a new list with n
+   strings in which the ith string of the resulting list is
+   the result of concatenating s to the ith element of L.
+   **********************************************************/
+  public static StringList mapConcat (String s, StringList L) {
+    
+    // Replace these comments and the return statement
+    // below with your solution.
+    return UnjumblerAnswers.mapConcat(s, L);
+    
+  }
+  
+  /***********************************************************  
+   Returns a list of all strings in L that are English
+   words. The resulting strings should be in the same relative
+   order as in L.
+  ***********************************************************/
+  public static StringList filterWords (StringList L)
+  {
+    // Replace these comments and the return statement
+    // below with your solution.
+    return UnjumblerAnswers.filterWords(L);
+  }
+  
+  
+  /***********************************************************  
+   Given two strings s1 and s2, where s2 has n characters,
+   returns a list of n + 1 strings that result from inserting
+   s1 at all possible positions within s2, from left to right.
+   ***********************************************************/
+  public static StringList insertions (String s1, String s2) {
+    
+    // Replace these comments and the return statement
+    // below with your solution.
+    return UnjumblerAnswers.insertions(s1,s2);
+    
+  }
+  
+  /***********************************************************  
+   Returns a list that contains all the strings that result
+   from inserting s at all possible positions in all the
+   strings of L.
+   ***********************************************************/
+  public static StringList insertionsList (String s, StringList L) {
+    
+    // Replace these comments and the return statement
+    // below with your solution.
+    return UnjumblerAnswers.insertionsList(s, L);
+    
+  }
+  
+  /***********************************************************  
+   Returns a list of all permutations of the string s. 
+   A permutation of a string s is any string that is formed by
+   reordering the letters in the string s (without duplicating
+   or deleting any letters). For a string with n distinct
+   characters, there are exactly n! (i.e., "n factorial")
+   permutations. If some characters in s are repeated, there
+   are still n! permutations, but the permutations contain
+   duplicates. The elements in the list returned by
+   permutations may be in any order.
+   ***********************************************************/
+  public static StringList permutations (String s)
+  {
+    // Replace these comments and the return statement
+    // below with your solution.
+    return UnjumblerAnswers.permutations(s);
+  }
+  
+  /***********************************************************  
+   Returns a list of all the permutations of s that are
+   English words (as determined by the default
+   dictionary). The order of elements in the resulting list
+   does not matter, but each word in the resulting list should
+   be listed only once.
+   ***********************************************************/
+  public static StringList unjumble (String s)
+  {
+    // Replace these comments and the return statement
+    // below with your solution.
+    return UnjumblerAnswers.unjumble(s);
+  }
+  
+  // ------------------------------------------------------------
+  // DICTIONARIES
+  
+  // You are provided with a method
+  //
+  //    private static boolean isWord (String s);
+  //
+  // that determines whether the string s is an English word. 
+  // You do not need to understand any of the details how this is
+  // done, except to know that it is performed by testing if s
+  // appears in a certain word list file.  So the test is only as
+  // good as the word list file it uses. 
+  
+  // The name of the file in which the dictionary resides is a
+  // class variable.  By default, it is "dicts/dict8.bin", but you
+  // can change it to be one of the other choices below.  All of
+  // the following dictionaries are derived from  the freely
+  // available Linux word list. Files with more words take longer
+  // to load. Note that the Linux word list is missing some English
+  // words. 
+  
+  private static String dir = "dicts" + java.io.File.separatorChar;  // directory
+  // private static String dictFile = "dict-small.bin";  // "foo", "bar", "baz" 
+  // private static String dictFile = "dict5.bin"; // Words up to 5 letters (5525 words)
+  // private static String dictFile = "dict6.bin"; // Words up to 6 letters (10488 words)
+  // private static String dictFile = "dict7.bin"; // Words up to 7 letters (16618 words)
+  private static String dictFile = "dict8.bin"; // Words up to 8 letters (22641 words)
+  // private static String dictFile = "dict.bin"; // Whole linux word list (45425 words)
+  
+  // For efficiency's sake, the dictionary itself is stored in a
+  // class variable.  This variable initially contains no
+  // dictionary.  It is intialized the first time that isWord() is
+  // called. 
+  private static Dict dict = null;
+  
+  // You should not need to add any other class variables!  The
+  // ones above suffice.   
+  private static boolean isWord (String s) {
+    if (dict == null) {         // If no dictionary yet
+      dict = Dict.fromFile(dir + dictFile);
+    }
+    return dict.isWord(s);
+  }
+}

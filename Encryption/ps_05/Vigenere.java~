@@ -1,0 +1,122 @@
+/*CS 230
+ * Abra White
+ * HW 5
+ * Last updated: October 16, 2013
+ */
+import java.util.*;
+
+public class Vigenere implements Encryptable{
+  //instance variables
+  private String message;
+  private boolean encrypted;
+  private String password;
+  
+  //constructor set the message and password. make them lowercase. set encrypted to false
+  public Vigenere(String msg, String pswrd){
+    message = msg.toLowerCase();
+    password = pswrd.toLowerCase();
+    encrypted = false;
+  }
+  
+  //encrypt the message with the password.If not already encrypted 
+  public void encrypt (){
+    if(!encrypted)
+    {
+      //set a temporary message variable, a variable to store the encrypted result, and a variable to store the substring
+      String str = message;
+      String after = "";
+      String sub= "";
+      
+      //if the message string is shorter than the password make the substring that length
+      //to avoid out of bounds exceptions
+      if(str.length()<password.length()){
+        sub=str;
+      }else{
+        //otherwise the substring should be the length of the password
+        sub = str.substring(0,password.length());
+      }
+      
+      //take a section of the whole message that is the length of the password
+      //or, if it is shorter than the password the whole length
+      //and shift each character with the corresponding password letter
+      //and if it shifts past z it goes back to the beginning
+      for(int i =0; i<=message.length()/password.length();i++){
+        if(sub.length()<password.length()){
+          for(int j=0; j<sub.length(); j++){
+            Character index = sub.charAt(j);
+            if(Character.isSpaceChar(index)){
+              sub=sub.substring(0,j-1)+sub.substring(j+1);
+            }else{
+              int passwordNum = (Character.getNumericValue(password.codePointAt(j))-10);
+              int code = sub.charAt(j)+passwordNum;
+              
+              //if code is greater than the codepoint of z 
+              char z = 'z';
+              char a = 'a';
+              if(code>z){
+                index = (char)((passwordNum-(z-sub.charAt(j)))+a);
+              }
+              //subtract the current from z and then subtract that from the numeric value and add the numeric value to a
+              else{
+                index=(char)(code);
+              }
+            }
+            after+=index;
+          }
+        }else{
+          for(int j=0; j<password.length(); j++){
+            Character index = sub.charAt(j);
+            if(Character.isSpaceChar(index)){
+              sub=sub.substring(0,j-1)+sub.substring(j+1);
+            }else{
+              int passwordNum = (Character.getNumericValue(password.codePointAt(j))-10);
+              int code = sub.charAt(j)+passwordNum;
+              
+              //if code is greater than the codepoint of z 
+              char z = 'z';
+              char a = 'a';
+              if(code>z){
+                index = (char)((passwordNum-(z-sub.charAt(j)))+a);
+              }
+              //subtract the current from z and then subtract that from the numeric value and add the numeric value to a
+              else{
+                index=(char)(code);
+              }
+            }
+            after+=index;
+          }
+          sub=str.substring(password.length()*i);
+        }
+      }
+      encrypted=true;
+      message=after;
+    }
+  }
+  
+  public String decrypt(){
+    return message;
+  }
+  
+  public boolean isEncrypted(){
+    return encrypted;
+  }
+  
+  public String toString(){
+    return message;
+  }
+  
+  public static void main(String [] args){
+    Scanner scan = new Scanner(System.in);
+    System.out.println("Enter a message");
+    String msg = scan.nextLine();
+    System.out.println("Enter a password");
+    String pswd = scan.nextLine();
+    Vigenere test1 = new Vigenere(msg, pswd);
+    test1.encrypt();
+    System.out.println(test1.toString());
+    
+  }
+  
+  
+  
+}
