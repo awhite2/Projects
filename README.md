@@ -39,4 +39,7 @@ MySQL and PHP social website to be used to connect homeless students with hosts 
 *WMDB
 Personal Movie Database
 
+*Redesign
+Paper written in early 2015 about the potential uses and opportunities of e-ink technology 
+
 For more graphics, art, video examples, and resume please visit: <a href="http://awhit19.wix.com/abra-white-portfolio">Portfolio Website</a>
