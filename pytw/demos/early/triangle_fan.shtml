@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name=author content="Scott D. Anderson">
+    <meta name=description content="">
+    <meta name=keywords content="">
+    <link rel="stylesheet" type="text/css" href="/~anderson/sda-style.css">
+    <script type="text/JavaScript" src="/~cs110/js/shjs-0.6/sh_main.js"></script>
+    <script type="text/JavaScript" src="/~cs110/js/shjs-0.6/lang/sh_python.js"></script>
+    <link rel="stylesheet" type="text/css" href="/~cs110/js/shjs-0.6/sh_style.css">
+    <title>triangle_fan.py</title>
+</head>
+<body onload="sh_highlightDocument();">
+<h1>triangle_fan.py</h1>
+<pre class="sh_python">
+<!--#include virtual="triangle_fan.py" -->
+</pre>
+<!--#include virtual="/~cs307/footer.shtml" -->
+</body>
+</html>

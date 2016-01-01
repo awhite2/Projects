@@ -1,0 +1,14 @@
+10 10
+/home/cs307/public_html/textures/stoneTile.ppm
+/home/cs307/public_html/textures/stoneTile.ppm
+/home/cs307/public_html/textures/USflag.ppm
+w w w w w w w w w w
+w f R m f f R f R w
+w R w f w f w w f w
+w f w f w f w f f w
+w f L f f f w f w w
+w w f w w f w L f w
+w f f f f f f f f w
+w f w f w f w w m w
+w s L f w f f L f w
+w w w w w w w w w w

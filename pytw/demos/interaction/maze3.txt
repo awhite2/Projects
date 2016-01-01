@@ -1,0 +1,24 @@
+20 20
+/home/cs307/public_html/textures/stoneTile.ppm
+/home/cs307/public_html/textures/stoneTile.ppm
+/home/cs307/public_html/textures/USflag.ppm
+w w w w w w w w w w w w w w w w w w w w
+w f f R f R p R f p f w f w f f f f f w
+w f w p p p p p f w f f f f f f f m f w
+w f f p f p m f f f m w f f f f L f f w
+w f w p R p f f p f p w f w f m f f f w
+w f w f f R f f f f f f f f f f f f f w
+w f w p p p f w f w w f w w f w f w f w
+w f w f f w f w f p f f f p f f m f f w
+w f w p m w f f f w w f w w f f p m f w
+w f w f f w w f w w f f f f m f f f f w
+w f w w f f f f p p f f f w p f f f f w
+w f p f f w f w w w f f f w w w f w w w
+w f w f w w f w f w w w f f f f f f f w
+w f p f f f m f f f f p f w w f w w w w
+w f w f w f f B f m f w f f f f f f f w
+w f w f m f f m f f f w f p p f w w w w
+w f p p p f p p p p p f f p p f w p p w
+w f w f w f w w f w p w f f f f f m p w
+w f f f m B f f f w p w s f f f w p p w
+w w w w w w w w w w w w w w w w w w w w

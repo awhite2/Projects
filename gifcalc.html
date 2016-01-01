@@ -1,0 +1,111 @@
+ <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+            "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">	
+	<title>
+	Thom Thumb ImageWorks GIF File Size Calculator
+	</title>
+<style type="text/css">
+body{background-color:#AAAABB;}
+table{margin-left: auto;
+margin-right: auto;
+background-color:#09C0FF;
+border: 2px dotted gray;
+}
+h1{text-align: center;}
+td{padding-right:100px;}
+</style>
+</head>
+<body>
+<div id="wrapper">	
+	<h1>Thom Thumb ImageWorks GIF File Size Calculator</h1>
+			<script type="text/javascript">
+				//calculate file size
+				function Size(width, height, colors){
+					//retrieve input values and define variables
+				var width=window.document.bitDepthForm.imageWidth.value;
+				var height=window.document.bitDepthForm.imageHeight.value;
+				var colors=window.document.bitDepthForm.colors.value;
+					
+					//calculate bit depth
+				var bitDepth=(Math.log(colors)/Math.log(2));
+				var bitDepth1=Math.ceil(bitDepth);
+					//calculate file size
+				var size=(((width*height*bitDepth1)/8)/1000);
+				var sizeRounded=Math.round(size);
+					//put into the text field
+				window.document.bitDepthForm.fileSizeField.value=sizeRounded;};
+				
+				//put together email address
+				function emailAddress(user,web){
+				var user=window.document.bitDepthForm.userField.value;
+				var web="@"+window.document.bitDepthForm.webField.value;
+					//set as the recipient		
+				window.document.bitDepthForm._recipient.value=user+web;
+				};
+			</script>
+	<form name="bitDepthForm" method="post" action="http://cs.wellesley.edu/cgi-bin/eform.cgi">
+
+		<table id="table" border="0px" cellpadding="10px">
+	<tr>
+		<td align="right">
+			<strong>Image width: </strong><input type="text" size="8" name="imageWidth">
+		</td>
+	</tr>
+	<tr>
+		<td align="right" id="imageHeight">
+			<strong>Image height: </strong><input type="text" size="8" name="imageHeight">
+		</td>
+	</tr>
+	<tr>
+		<td align="right" id="colors">
+			<strong>Number of Colors: </strong><input type="text" size="8" name="colors">
+		</td>
+	</tr>
+	<tr>
+<!--buttons to run size() function and reset-->		
+		<td align="right" >
+			<input type="button" value="Calculate"
+			onClick="Size();">
+			<input type="reset" value="Reset">
+		</td>
+	</tr>
+	<tr>
+		<td align="right">
+		<strong>Your file size is:</strong>
+		<input type="text" size="8" name="fileSizeField">
+		KB
+		</td>
+	</tr>
+	<tr>
+<!--submit form with email address field-->
+		<td>
+		<input type="submit"
+		onClick="emailAddress();
+		return true;"
+		value="Send to:">
+		<input type="text" size="12" name="userField">
+		@
+		<input type="text" size="12" name="webField">
+		
+		<input type="hidden"
+		name="_recipient">
+		</td>
+	</tr>
+	</table>
+	</form>
+<p>
+  <p>
+    <a href="http://validator.w3.org/check?uri=referer"><img
+      src="http://www.w3.org/Icons/valid-html401" alt="Valid HTML 4.01 Strict" height="31" width="88"></a>
+  	 <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
+  </p>
+</p>
+</div>
+</body>
+</html>
